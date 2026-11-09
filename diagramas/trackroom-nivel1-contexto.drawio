@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net">
+<diagram id="ctx" name="Nivel 1 - Contexto">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Diagrama de Contexto – Trackroom (Nível 1)" style="text;html=0;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="700" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="a1" value="Ouvinte&#xa;[Pessoa]&#xa;Ouve músicas e cria playlists" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;fillColor=#DAE8FC;strokeColor=#08427B;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="a2" value="Artista&#xa;[Pessoa]&#xa;Publica faixas e álbuns" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;fillColor=#DAE8FC;strokeColor=#08427B;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="340" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="a3" value="Administrador&#xa;[Pessoa]&#xa;Modera conteúdo e usuários" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=0;fillColor=#DAE8FC;strokeColor=#08427B;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="sys" value="Trackroom&#xa;[Sistema de Software]&#xa;&#xa;Plataforma de streaming de música: busca, reprodução, playlists e publicação de faixas" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#08427B;strokeColor=#052E56;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="500" y="310" width="280" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="Google OAuth&#xa;[Sistema Externo]&#xa;&#xa;Autentica usuários com conta Google" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="110" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="Stripe&#xa;[Sistema Externo]&#xa;&#xa;Cobra as assinaturas premium" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="335" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="SendGrid&#xa;[Sistema Externo]&#xa;&#xa;Entrega e-mails da plataforma" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="560" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="r1" value="Busca, reproduz e&#xa;organiza músicas" style="endArrow=block;html=0;labelBackgroundColor=#FFFFFF;fontSize=11;" edge="1" parent="1" source="a1" target="sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r2" value="Publica faixas&#xa;e álbuns" style="endArrow=block;html=0;labelBackgroundColor=#FFFFFF;fontSize=11;" edge="1" parent="1" source="a2" target="sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r3" value="Modera conteúdo&#xa;e usuários" style="endArrow=block;html=0;labelBackgroundColor=#FFFFFF;fontSize=11;" edge="1" parent="1" source="a3" target="sys">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r4" value="Autentica usuários&#xa;(login social)" style="endArrow=block;html=0;labelBackgroundColor=#FFFFFF;fontSize=11;" edge="1" parent="1" source="sys" target="e1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r5" value="Processa assinaturas&#xa;premium" style="endArrow=block;html=0;labelBackgroundColor=#FFFFFF;fontSize=11;" edge="1" parent="1" source="sys" target="e2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="r6" value="Envia e-mails de&#xa;confirmação e recuperação" style="endArrow=block;html=0;labelBackgroundColor=#FFFFFF;fontSize=11;" edge="1" parent="1" source="sys" target="e3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg" value="Legenda" style="text;html=0;fontStyle=1;fontSize=13;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="740" width="100" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg1" value="Pessoa" style="shape=umlActor;verticalLabelPosition=middle;labelPosition=right;align=left;verticalAlign=middle;html=0;fillColor=#DAE8FC;strokeColor=#08427B;" vertex="1" parent="1">
+          <mxGeometry x="40" y="775" width="20" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg2" value="Sistema principal" style="rounded=1;html=0;fillColor=#08427B;strokeColor=#052E56;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="200" y="785" width="130" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="lg3" value="Sistema externo" style="rounded=1;html=0;fillColor=#999999;strokeColor=#6B6B6B;fontColor=#FFFFFF;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="360" y="785" width="130" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
